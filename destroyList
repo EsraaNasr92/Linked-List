@@ -1,0 +1,15 @@
+Void deleteList(Node *&head){
+	if(head == NULL){
+		return;
+	}
+	
+	Node *p = head;
+	Node *current = head;
+	
+	while(p != NULL){
+		current = p->next;
+		delete p;
+		p = current;
+	}
+	head = NULL;
+}
