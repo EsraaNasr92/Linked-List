@@ -1,0 +1,17 @@
+int maxNumber(Node *head){
+	if(head == NULL){
+		return 0;
+	}
+	Node *p = head;
+	int max = p->data;
+	
+	while(p != NULL){
+		if(max < p->data){
+			max = p->data;
+		}
+		p = p->next;
+		
+		
+	}
+	return max;
+}
